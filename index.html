@@ -7,7 +7,191 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <section></section>
+  <body class="transition-colors duration-500 bg-base-200">
+    <!-- Navbar -->
+    <nav>
+      <div class="navbar bg-white shadow-sm rounded-lg">
+        <div class="flex-none">
+          <img src="./assets/logo.png" alt="" />
+        </div>
+        <div class="flex-1">
+          <a class="btn btn-ghost text-2xl gap-0">Dev<span class="font-bold">Board</span></a>
+        </div>
+        <div class="flex-none flex items-center gap-4">
+          <div class="flex items-center gap-9">
+            <div class="flex gap-2 bg-slate-200 py-2 px-4 rounded-full justify-center items-center text-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 bg-blue-600 rounded-lg text-white">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+              <span id="completedCount" class="font-bold text-xl">23</span>
+            </div>
+            <button id="themeBtn" class="rounded-full p-1 bg-slate-200">
+              <img src="./assets/theme-btn.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Dashboard Layout -->
+    <main>
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 p-6">
+        <!-- Left-->
+        <div class="lg:col-span-3 space-y-4 bg-white rounded-xl p-6">
+          <!-- Banner -->
+          <section class="rounded-xl justify-between items-center grid grid-cols-4 gap-4">
+            <!-- Task Assigned  -->
+            <div class="col-span-1">
+              <div class="flex justify-between items-center bg-blue-50 rounded-lg p-9">
+                <div class="p-4 bg-white rounded-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 bg-blue-600 rounded-lg text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                  </svg>
+                </div>
+                <div>
+                  <h1 class="font-semibold text-blue-950">Task Assigned</h1>
+                  <span id="taskCount" class="font-bold text-xl">06</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Big Button -->
+            <div class="col-span-2">
+              <div id="blogs-btn" class="bg-gradient-to-r from-indigo-500 to-blue-400 flex rounded-lg justify-center items-center text-center p-6">
+                <img src="./assets/board.png" alt="" />
+                <h2 class="text-xl font-bold text-white">Discover Something New Today!</h2>
+              </div>
+            </div>
+
+            <!-- Calender -->
+            <div class="col-span-1">
+              <div class="flex bg-blue-50 rounded-lg justify-center items-center text-center p-6 gap-2">
+                <div class="bg-white rounded-full p-4">
+                  <img src="./assets/calender.png" alt="" />
+                </div>
+                <div>
+                  <span id="dateDay" class="text-black text-xl font-bold"></span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <p class="text-slate-500">-------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+
+          <!-- Task Cards -->
+          <section class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Card -->
+            <div class="card bg-blue-50 shadow">
+              <div class="card-body">
+                <div>
+                  <p class="text-sm font-semibold text-gray-400 bg-white w-1/3 text-center rounded-full p-1">ShopEase</p>
+                  <h2 class="card-title mt-2 mb-2">Fix Mobile Button Issue</h2>
+                  <p class="h-20 p-2 bg-white rounded-lg overflow-auto border-gray-300">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly.</p>
+                </div>
+                <p class="text-slate-500">-----------------------------------------------</p>
+                <div class="card-actions justify-end">
+                  <p class="text-sm">Deadline: 21 March 2025</p>
+                  <button class="btn btn-sm btn-primary completeBtn">Completed</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card bg-blue-50 shadow">
+              <div class="card-body">
+                <div>
+                  <p class="text-sm font-semibold text-gray-400 bg-white w-1/3 text-center rounded-full p-1">CloudSync</p>
+                  <h2 class="card-title mt-2 mb-2">Add Dark Mode</h2>
+                  <p class="h-20 p-2 bg-white rounded-lg overflow-y-auto border-gray-300">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
+                </div>
+                <p class="text-slate-500">-----------------------------------------------</p>
+                <div class="card-actions justify-end">
+                  <p class="text-sm">Deadline: 21 March 2025</p>
+                  <button class="btn btn-sm btn-primary completeBtn">Completed</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card bg-blue-50 shadow">
+              <div class="card-body">
+                <div>
+                  <p class="text-sm font-semibold text-gray-400 bg-white w-1/3 text-center rounded-full p-1">SwiftPay</p>
+                  <h2 class="card-title mt-2 mb-2">Optimize Home page</h2>
+                  <p class="h-20 p-2 bg-white rounded-lg overflow-y-auto border-gray-300">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
+                </div>
+                <p class="text-slate-500">-----------------------------------------------</p>
+                <div class="card-actions justify-end">
+                  <p class="text-sm">Deadline: 21 March 2025</p>
+                  <button class="btn btn-sm btn-primary completeBtn">Completed</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card bg-blue-50 shadow">
+              <div class="card-body">
+                <div>
+                  <p class="text-sm font-semibold text-gray-400 bg-white w-1/3 text-center rounded-full p-1">Meta</p>
+                  <h2 class="card-title mt-2 mb-2">Add new emoji 🤲</h2>
+                  <p class="h-20 p-2 bg-white rounded-lg overflow-y-auto border-gray-300">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
+                </div>
+                <p class="text-slate-500">-----------------------------------------------</p>
+                <div class="card-actions justify-end">
+                  <p class="text-sm">Deadline: 21 March 2025</p>
+                  <button class="btn btn-sm btn-primary completeBtn">Completed</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card bg-blue-50 shadow">
+              <div class="card-body">
+                <div>
+                  <p class="text-sm font-semibold text-gray-400 bg-white w-1/3 text-center rounded-full p-1">Google LLC</p>
+                  <h2 class="card-title mt-2 mb-2">Integrate OpenAI API</h2>
+                  <p class="h-20 p-2 bg-white rounded-lg overflow-y-auto border-gray-300">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
+                </div>
+                <p class="text-slate-500">-----------------------------------------------</p>
+                <div class="card-actions justify-end">
+                  <p class="text-sm">Deadline: 21 March 2025</p>
+                  <button class="btn btn-sm btn-primary completeBtn">Completed</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card bg-blue-50 shadow">
+              <div class="card-body">
+                <div>
+                  <p class="text-sm font-semibold text-gray-400 bg-white w-1/3 text-center rounded-full p-1">Glassdoar</p>
+                  <h2 class="card-title mt-2 mb-2">Improve Job searching</h2>
+                  <p class="h-20 p-2 bg-white rounded-lg overflow-y-auto border-gray-300">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly.</p>
+                </div>
+                <p class="text-slate-500">-----------------------------------------------</p>
+                <div class="card-actions justify-end">
+                  <p class="text-sm">Deadline: 21 March 2025</p>
+                  <button class="btn btn-sm btn-primary completeBtn">Completed</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Right Side (Activity Log) -->
+        <section class="bg-base-100 shadow p-4 rounded-xl text-center">
+          <div class="items-center justify-center flex gap-2">
+            <img src="./assets/activity.png" alt="" />
+            <h3 class="font-bold text-lg">Activity Log</h3>
+          </div>
+          <div>
+            <button id="clearLog" class="btn btn-sm btn-primary completeBtn mt-4">Clear History</button>
+            <p class="text-slate-500">----------------------------------------</p>
+            <ul id="activityLog" class="p-3 space-y-1 text-sm bg-blue-50 mt-2 rounded-r-xl"></ul>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Index JS File -->
+    <script src="./script/fontpage.js"></script>
+    <script src="./script/theme.js"></script>
+    <script src="./script/calender.js"></script>
+    <script src="./script/button.js"></script>
   </body>
 </html>
