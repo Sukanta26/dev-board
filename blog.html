@@ -32,29 +32,69 @@
           <h1 class="text-2xl font-bold text-center">Blogs</h1>
           <div class="mt-5">
             <div class="bg-base-100 border border-base-300 mt-3 p-3 rounded-lg shadow-sm">
-              <div class="font-semibold">Question-1:What are the different ways to select an element in the DOM</div>
+              <h1 class="font-bold text-xl">Question-1: What are the different ways to select an element in the DOM?</h1>
               <p class="text-slate-500">--------------------------------------------------------------------------------------------------------------------------------------------</p>
-              <div class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam voluptatem enim ducimus illum error illo facere voluptatum sunt magnam placeat, sint nemo aperiam deleniti earum fugit magni repellendus atque eum.</div>
+              <div class="text-sm space-y-3">
+                <h1 class="font-bold">In JavaScript, there are several ways to select an element in the DOM. Each method is used depending on what you want to select.</h1>
+                <ul class="space-y-2">
+                  <li><span class="font-bold">1.By ID:</span> document.getElementById("idName")</li>
+                  <li><span class="font-bold">2.By Class Name:</span> document.getElementsByTagName("tagName")</li>
+                  <li><span class="font-bold">3.By Tag Name:</span>document.getElementsByTagName("tagName")</li>
+                  <li><span class="font-bold">4.By Name Attribute:</span> document.getElementsByName("nameValue")</li>
+                  <li><span class="font-bold">5.Query Selector (CSS Selector):</span> document.querySelectorAll("selector")</li>
+                  <li><span class="font-bold">6.Query Selector All (CSS Selector):</span> document.querySelectorAll("selector")</li>
+                </ul>
+              </div>
             </div>
             <div class="bg-base-100 border border-base-300 mt-3 p-3 rounded-lg shadow-sm">
-              <div class="font-semibold">Question-1:What are the different ways to select an element in the DOM</div>
+              <h1 class="font-bold text-xl">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h1>
               <p class="text-slate-500">--------------------------------------------------------------------------------------------------------------------------------------------</p>
-              <div class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam voluptatem enim ducimus illum error illo facere voluptatum sunt magnam placeat, sint nemo aperiam deleniti earum fugit magni repellendus atque eum.</div>
+              <div class="text-sm space-y-3">
+                <h1 class="font-bold">These three (innerHTML, innerText, textContent) are confusing element in the DOM</h1>
+                <ul class="space-y-2">
+                  <li><span class="font-bold">1.innerHTML:</span> It can add HTML elements dynamically.</li>
+                  <li><span class="font-bold">2.innerText:</span> It sets the visible text only.</li>
+                  <li><span class="font-bold">3.textContent:</span> It sets all text inside an element. It doesn't care about CSS visibility.</li>
+                </ul>
+              </div>
             </div>
             <div class="bg-base-100 border border-base-300 mt-3 p-3 rounded-lg shadow-sm">
-              <div class="font-semibold">Question-1:What are the different ways to select an element in the DOM</div>
+              <h1 class="font-bold text-xl">Question-3: What is event delegation in the DOM?</h1>
               <p class="text-slate-500">--------------------------------------------------------------------------------------------------------------------------------------------</p>
-              <div class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam voluptatem enim ducimus illum error illo facere voluptatum sunt magnam placeat, sint nemo aperiam deleniti earum fugit magni repellendus atque eum.</div>
+              <div class="text-sm space-y-3">
+                <h1 class="font-bold">Event delegation is a very important DOM concept in JavaScript.</h1>
+                <ul class="space-y-2">
+                  <li><span class="font-bold">1.What is Event Delegation:</span> Event Delegation is a technique of handling events efficiently.</li>
+                  <li><span class="font-bold">2.Event Delegation:</span> Putting an event listener on a parent element to handle events for all its children</li>
+                  <li><span class="font-bold">3.Uses event bubbling mechanism.:</span></li>
+                  <li><span class="font-bold">4.Benefits:</span> Performance, less code, works with dynamic elements.</li>
+                </ul>
+              </div>
             </div>
             <div class="bg-base-100 border border-base-300 mt-3 p-3 rounded-lg shadow-sm">
-              <div class="font-semibold">Question-1:What are the different ways to select an element in the DOM</div>
+              <h1 class="font-bold text-xl">Question-4: What is event bubbling in the DOM?</h1>
               <p class="text-slate-500">--------------------------------------------------------------------------------------------------------------------------------------------</p>
-              <div class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam voluptatem enim ducimus illum error illo facere voluptatum sunt magnam placeat, sint nemo aperiam deleniti earum fugit magni repellendus atque eum.</div>
+              <div class="text-sm space-y-3">
+                <h1 class="font-bold">Event bubbling is a mechanism in the DOM where an event starts from the target element.</h1>
+                <ul class="space-y-2">
+                  <li><span class="font-bold">1.Visual Diagram:</span> Child → Parent → Body → Document → Window</li>
+                  <li><span class="font-bold">2.Why is Bubbling Important:</span> It allows event delegation. Saves performance by reducing number of event listeners.</li>
+                  <li><span class="font-bold">3.How to Stop Bubbling:</span> event.stopPropagation();</li>
+                </ul>
+              </div>
             </div>
             <div class="bg-base-100 border border-base-300 mt-3 p-3 rounded-lg shadow-sm">
-              <div class="font-semibold">Question-1:What are the different ways to select an element in the DOM</div>
+              <h1 class="font-bold text-xl">Question-5: How do you create, add, and remove elements using JavaScript?</h1>
               <p class="text-slate-500">--------------------------------------------------------------------------------------------------------------------------------------------</p>
-              <div class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam voluptatem enim ducimus illum error illo facere voluptatum sunt magnam placeat, sint nemo aperiam deleniti earum fugit magni repellendus atque eum.</div>
+              <div class="text-sm space-y-3">
+                <h1 class="font-bold">Let's go step by step</h1>
+                <ul class="space-y-2">
+                  <li><span class="font-bold">1.Create:</span> document.createElement("tag")</li>
+                  <li><span class="font-bold">2.Adding Elements:</span> appendChild(), append(), prepend(), insertBefore(), insertAdjacentHTML()</li>
+                  <li><span class="font-bold">3.Remove:</span> removeChild(), remove()</li>
+                  <li><span class="font-bold">4.Replacing Elements:</span>replaceChild()</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
